@@ -3,13 +3,13 @@
  Exercice    : Array p.79
  Fichier     : Array.h
  Auteur      : Vincent Guidoux
- But         : Implémentation de la classe Array permettant de définir un tableau d’un
-               type donné et d’une taille donnée et une classe interne Iterator permettant
-               de parcourir ses éléments.
+ But         : Implémentation de la classe Array permettant de définir un
+               tableau d’un type donné et d’une taille donnée et une classe
+               interne Iterator permettant de parcourir ses éléments.
  Date        : 13.04.2018
  ------------------------------------------------------------------------------
- */
- #ifndef ARRAY_ARRAY_H
+*/
+#ifndef ARRAY_ARRAY_H
 #define ARRAY_ARRAY_H
 
 #include <cstring>
@@ -25,7 +25,6 @@ public:
 
     Array(const Array &o) : length(o.length), data(new T[length]) {
 
-
         memcpy(data, o.data, length * sizeof(T));
     }
 
@@ -35,8 +34,8 @@ public:
 
     Array &operator=(const Array &o) {
         if (&o != this) {
-            Array tmp(o);
-            return tmp;
+            Array newArray(o);
+            return newArray;
         }
         return *this;
     }

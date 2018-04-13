@@ -14,7 +14,6 @@ int main() {
     s[3] = 4;
     s[4] = 5;
 
-
     Array<int>::Iterator end = s.end();
 
     cout << "s:" << endl;
